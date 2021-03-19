@@ -1,0 +1,28 @@
+<%- include('layouts/cmsHeader'); -%>
+<body>
+  <%- include('layouts/headerVisualForEditHeader'); -%>
+  <%- include('layouts/adminNav'); -%>
+    <section class="w50">
+        <form action="" method="POST" enctype="multipart/form-data" >
+            Header Name: <input type="text" name="hname" id="hname" value="<%= header.hname %>">
+            <br><br>
+            Header image: <input type="file" name="headerImage" id="headerImage" value="<%= header.headerImage %>">
+            <br><br>
+
+            <input type="submit" value="Submit">
+            <br>
+            <p id="errors"><%
+                if(typeof(errors) != 'undefined'){
+                  for(var error of errors){
+                  %>
+                    <p class="errors"><%= error.msg %></p>
+                  <%
+                  }
+                }
+              %></p>
+        </form>
+    </section>
+
+    <div class="clear"></div>
+</body>
+<%- include('layouts/footer'); -%>

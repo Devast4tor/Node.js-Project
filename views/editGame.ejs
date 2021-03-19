@@ -1,0 +1,35 @@
+<%- include('layouts/cmsHeader'); -%>
+<body>
+  <%- include('layouts/adminNav'); -%>
+    <section class="w50">
+        <form action="" method="POST" enctype="multipart/form-data" >
+            Game Name: <input type="text" name="gname" id="gname" value="<%= game.gname %>">
+            <br><br>
+            Game Genre: <input type="text" name="genre" id="genre" value="<%= game.genre %>">
+            <br><br>
+            Game image: <input type="file" name="gameImage" id="gameImage" value="<%= game.image %>">
+            <br><br>
+            
+            Game Descriptiion:<br><br>
+            <textarea style="width:600px;" name="description" id="description"><%= game.description %></textarea>
+            <br><br>
+
+            
+            
+            <input type="submit" value="Submit">
+            <br>
+            <p id="errors"><%
+                if(typeof(errors) != 'undefined'){
+                  for(var error of errors){
+                  %>
+                    <p class="errors"><%= error.msg %></p>
+                  <%
+                  }
+                }
+              %></p>
+        </form>
+    </section>
+
+    <div class="clear"></div>
+</body>
+<%- include('layouts/footer'); -%>

@@ -1,0 +1,39 @@
+<%- include('layouts/cmsheader'); -%>
+<body>
+    <%- include('layouts/headerVisual'); -%>
+    <%- include('layouts/adminNav'); -%>
+    <section class="editGames">
+       <table>
+           <thead>
+               <tr>
+                    <th>Name</th>
+                    <!--
+                    <th>Genre</th>
+                    <th>Image</th>
+                    <th>Description</th>
+                    -->
+                    <th>Edit</th>
+                    <th>DELETE</th>
+           </thead>
+           <tbody>
+                <%
+                    for(var game of games){
+                        %>
+                            <tr>
+                                <td><%= game.gname %></td>
+                                <!--
+                                <td><%= game.genre %></td>
+                                <td><%= game.image %></td>
+                                <td><%- game.description %></td>
+                                -->
+                                <td><a href="/editGame/<%= game._id %>">EDIT</a></td>
+                                <td><a href="/deleteGame/<%= game._id %>">DELETE</a></td>
+                           </tr>
+                        <%
+                    }
+                %>
+           </tbody>
+       </table>
+    </section>
+</body>
+<%- include('layouts/footer'); -%>

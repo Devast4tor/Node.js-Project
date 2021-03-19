@@ -1,0 +1,30 @@
+<nav class="top_menu">
+    <ul>
+      <li>
+        <a href="/">Home</a>
+     </li>
+     <li>
+       <a href="/admin">Admin</a>
+    </li>
+    <% 
+    for(game of games)
+    {
+      %>
+        <li>
+          <a 
+            <%
+            if(typeof(pageurl) != 'undefined'){
+                if(pageurl == 'game.gname'){
+                    %>
+                    class = "current"
+                    <%
+                }
+            }
+            %>
+            href="/viewGame/<%= game._id%>"><%=game.gname%></a>
+        </li>
+      <%
+    }
+    %>
+    </ul>
+</nav>

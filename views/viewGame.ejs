@@ -1,0 +1,26 @@
+<%- include('layouts/header'); -%>
+<body>
+    <%- include('layouts/headerVisual'); -%>
+    <%- include('layouts/nav'); -%>
+    <!--<section class="w50">
+    <%
+        if(typeof(games) != 'undefined'){
+        %>
+            <h2><%= game.gname %></h2>
+            <h2><%= game.genre %></h2>
+        <%
+        }
+    %>-->
+    </section>
+    <section class="w50">
+        <form action="" enctype="multipart/form-data" >
+            <h3><%= game.gname %></h3>
+            <h3><%= game.genre %></h3>
+            <img src="/user_images/<%= game.image %>" alt="<%= game.image %>">
+           <p><%- game.description %></p>
+        </form>
+    </section>
+
+<div class="clear"></div>
+</body>
+<%- include('layouts/footer'); -%>

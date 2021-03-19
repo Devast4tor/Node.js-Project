@@ -1,0 +1,59 @@
+<nav class="top_menu">
+    <ul>
+        <li>
+            <a href="/">Home</a>
+        </li>
+        <li>
+            <a 
+              <%
+                if(typeof(pageurl) != 'undefined'){
+                    if(pageurl == 'addpage'){
+                        %>
+                        class = "current"
+                        <%
+                    }
+                }
+                %>
+            href="/addpage">Add page</a>
+        </li>
+        <li>
+            <a 
+            <%
+            if(typeof(pageurl) != 'undefined'){
+                if(pageurl == 'editGame'){
+                    %>
+                    class = "current"
+                    <%
+                }
+            }
+            %>
+            href="/viewGames">Edit Pages</a>
+        </li>
+        <li>
+            <a 
+            <%
+            if(typeof(pageurl) != 'undefined'){
+                if(pageurl == 'editHeader'){
+                    %>
+                    class = "current"
+                    <%
+                }
+            }
+            %>
+            href="/editHeader">Edit header</a>
+        </li>
+        <li>
+            <a 
+            <%
+            if(typeof(pageurl) != 'undefined'){
+                if(pageurl == 'logout'){
+                    %>
+                    class = "current"
+                    <%
+                }
+            }
+            %>
+            href="/logout">Logout</a>
+        </li>
+    </ul>
+</nav>

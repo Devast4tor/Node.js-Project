@@ -1,0 +1,25 @@
+{
+  "name": "gamewebsite",
+  "version": "1.0.0",
+  "description": "Game website",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "ejs": "*",
+    "body-parser": "*",
+    "express-validator": "*",
+    "mongoose": "*",
+    "express-session": "*",
+    "express-fileupload": "*",
+    "fs-extra": "*"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "awesome"
+  ],
+  "author": "Andrew Turner",
+  "license": "ISC"
+}
